@@ -1,0 +1,31 @@
+server:
+  port: 9081
+spring:
+  application:
+    name: microservice-consumer-movie-feign-customizing
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+#feign:
+#  client:
+#    config:
+#      default:
+#       loggerLevel: BASIC
+#       connectTimeout: 5000
+#       readTimeout: 5000
+#feign:
+#  client:
+#    config:
+#      microservice-provider-user-ribbon:
+#        loggerLevel: BASIC
+#        connectTimeout: 5000
+#        readTimeout: 5000
+
+
+#feign:
+#  client:
+#    default-to-properties: false

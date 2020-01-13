@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: microservice-gateway-zuul-fallback
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes,filters,hystrix.stream
+zuul:
+  ribbon-isolation-strategy: thread
+  thread-pool:
+    use-separate-thread-pools: true
+    thread-pool-key-prefix: prefix-

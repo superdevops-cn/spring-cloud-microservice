@@ -1,0 +1,29 @@
+#服务端口
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-provider-user-metadata
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.10.21:3306/microservice01?useUnicode=true;characterEncoding=utf8;allowMultiQueries=true;autoReconnect=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    platform: mysql
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+    initialization-mode: always
+
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:1234@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      k1: v1
+      k2: v2
+

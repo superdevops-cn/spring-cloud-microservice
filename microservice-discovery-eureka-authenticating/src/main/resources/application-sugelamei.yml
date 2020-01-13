@@ -1,0 +1,45 @@
+#忽略指定名称的网卡
+spring:
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - eth0
+        - eth1
+        - eth2
+eureka:
+  instance:
+    prefer-ip-address: true
+
+---
+#只使用站点本地地址
+
+spring:
+  cloud:
+    inetutils:
+      use-only-site-local-interfaces: true
+eureka:
+  instance:
+    prefer-ip-address: true
+
+---
+#使用正则表达式，指定使用的网络地址
+spring:
+  cloud:
+    inetutils:
+      preferred-networks:
+        - 192.168
+        - 10.8
+eureka:
+  instance:
+    prefer-ip-address: true
+
+---
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+---
+eureka:
+  client:
+    healthcheck:
+      enabled: true

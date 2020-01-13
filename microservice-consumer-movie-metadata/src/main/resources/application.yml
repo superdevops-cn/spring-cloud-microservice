@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: microservice-consumer-movie-metadata
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:1234@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
