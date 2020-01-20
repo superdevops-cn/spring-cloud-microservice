@@ -1,0 +1,16 @@
+server:
+  port: 8180
+spring:
+  application:
+    name: microservice-config-server-encryption
+  cloud:
+    config:
+      server:
+        git:
+          #配置Git仓库地址
+          uri: https://github.com/superdevops-cn/spring-cloud-config-repo
+          #Git 仓库的账号
+          username: superdevops-cn
+          #Git 仓库的密码
+          password: wxc291748zy
+

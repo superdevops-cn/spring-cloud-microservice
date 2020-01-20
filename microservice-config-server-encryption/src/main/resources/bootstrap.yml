@@ -1,0 +1,2 @@
+encrypt:
+  key: superdevops.cn  #对称加密密钥
